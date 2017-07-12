@@ -1,0 +1,64 @@
+<ion-view title="NUEVO CRASH" id="newCrash">
+  <ion-content padding="true" class="has-header">
+    <div class="list card" id="nUEVOCRASH-card22">
+      <div class="item item-body" id="nUEVOCRASH-list-item-container4">
+        <div id="nUEVOCRASH-markdown5" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Vehículo A</p>
+        </div>
+        <form class="list">
+          <label class="item item-input">
+            <input type="text" placeholder="Matrícula" ng-model="a_uid">
+          </label>
+          <label class="item item-input" >
+            <input type="text" placeholder="Marca" ng-model="a_brand">
+          </label>
+          <label class="item item-input" >
+            <input type="text" placeholder="Modelo" ng-model="a_model">
+          </label>
+          <label class="item item-input" id="nUEVOCRASH-input6">
+            <input type="text" placeholder="Color" ng-model="a_color">
+          </label>
+        </form>
+      </div>
+      <div class="item item-body" id="nUEVOCRASH-list-item-container4">
+        <div id="nUEVOCRASH-markdown5" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Vehículo B</p>
+        </div>
+        <form id="nUEVOCRASH-form2" class="list">
+          <label class="item item-input">
+            <input type="text" placeholder="Matrícula" ng-model="b_uid">
+          </label>
+          <label class="item item-input" >
+            <input type="text" placeholder="Marca" ng-model="b_brand">
+          </label>
+          <label class="item item-input" >
+            <input type="text" placeholder="Modelo" ng-model="b_model">
+          </label>
+          <label class="item item-input" id="nUEVOCRASH-input6">
+            <input type="text" placeholder="Color" ng-model="b_color">
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="list card" id="nUEVOCRASH-card23">
+      <div class="item item-body" id="nUEVOCRASH-list-item-container5">
+        <div id="nUEVOCRASH-markdown6" class="show-list-numbers-and-dots">
+          <p style="margin-top:0px;color:#000000;">Otros datos</p>
+        </div>
+        <form id="nUEVOCRASH-form3" class="list">
+          <label class="item item-input">
+            <input type="text" placeholder="Fecha" ng-model="o_date">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Ciudad" ng-model="o_city">
+          </label>
+          <label class="item item-input">
+            <input type="text" placeholder="Dirección" ng-model="o_adress">
+          </label>
+        </form>
+      </div>
+    </div>
+    <a on-tap="save()" id="nUEVOCRASH-button9" class="button button-balanced  button-block icon-left ion-android-car">GUARDAR CRASH</a>
+    <a ui-sref="menu.home" id="nUEVOCRASH-button10" class="button button-assertive  button-block icon-right ion-android-cancel">CANCELAR CRASH</a>
+  </ion-content>
+</ion-view>
