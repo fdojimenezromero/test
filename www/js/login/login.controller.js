@@ -9,12 +9,16 @@ function ($scope, $stateParams, $state, storageFactory, $window) {
     var userData;
     provider.addScope('https://www.googleapis.com/auth/plus.login');
 
-    $window.localStorage['user'] = JSON.stringify('el usuario');
-    var user = JSON.parse($window.localStorage[key] || '{}');
-
-    activate();
-    getCredentialsGoogle();
-
+    if ($window.localStorage['user']) {
+     var userData = JSON.parse($window.localStorage['user']);
+     storageFactory.saveData("user",userData);
+     $state.go('menu.home', {userId:userData.uid});
+    } else {
+      activate();
+      getCredentialsGoogle();
+  
+    }
+    
     //getCredentialsFacebook(); //TODO Next implementation
 
 
@@ -61,6 +65,7 @@ function ($scope, $stateParams, $state, storageFactory, $window) {
                 //PASAR A LA SIGUIENTE VISTA
                 $scope.userData = userData;
                 storageFactory.saveData("user",userData);
+                $window.localStorage['user'] = JSON.stringify(userData);
                 $state.go('menu.home', {userId:userData.uid});
             });
           };
